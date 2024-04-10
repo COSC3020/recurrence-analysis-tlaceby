@@ -28,7 +28,7 @@ function mystery(n) {
 }
 ```
 
-**Solution**
+### Analysis
 
 Let $T(n)$ be the running time of `mystery(n)`.
 
@@ -47,6 +47,8 @@ Therefore the total number of operations in the nested loop is $n^2 \cdot n \cdo
 
 By combining all the above mentioned statements:
 $T(n) = 3 \cdot T(n/3) + \Theta(n^5)$ when $n >= 1$
+
+**Final Solution**
 
 I would reason that the term $\Theta(n^5)$ and $3 \cdot T(n/3)$ can be analized seperately then combined after. Thus $3 \cdot T(n/3)$ would be $\Theta(n)$
 and $\Theta(n^5)$ would become $\Theta(n^5)$
