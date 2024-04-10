@@ -46,13 +46,13 @@ The inner loop runs $n^2$ times for each iteration of the middle loop.
 Therefore the total number of operations in the nested loop is $n^2 \cdot n \cdot n^2 = n^5$.
 
 By combining all the above mentioned statements:
-$T(n) = 3 \cdot T(n/3) + T(n^5)$ when $n > 1$
+$T(n) = 3 \cdot T(n/3) + n^5$ when $n > 1$
 
-**Final Solution**
+**Recurrence Relation & Final Solution**
 
-I would reason that the term $T(n^5)$ and $3 \cdot T(n/3)$ can be analized seperately then combined after. Thus $3 \cdot T(n/3)$ would be $\Theta(n)$
-and $T(n^5)$ would become $\Theta(n^5)$
+I would reason that the term $n^5$ and $3 \cdot T(n/3)$ can be analized seperately then combined after. Thus $3 \cdot T(n/3)$ would be $\Theta(n)$
+and $n^5$ would become $\Theta(n^5)$
 
-Finally we get $T(n) = \Theta(n) + \Theta(n^5)$ which simplifies to $\Theta(n^5)$ when $n >= 1$.
+Finally we get $T(n) = \Theta(n) + \Theta(n^5)$ which simplifies to $\Theta(n^5)$ when $n > 1$.
 
 Therefore the runtime complexity of the `mystery()` function is $\Theta(n^5)$.
